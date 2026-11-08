@@ -21,7 +21,7 @@ export default function AdminPage() {
         <section>
           <p>{report.count} turnos · {formatPrice(report.revenue)}</p>
           <ul>
-            {report.byService.map((s) => (
+            {report.byService?.map((s) => (
               <li key={s.serviceId}>{s.name}: {s.count} · {formatPrice(s.revenue)}</li>
             ))}
           </ul>

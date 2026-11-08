@@ -58,3 +58,17 @@ Después de probar, descartá los PR/ramas del agente (nunca mergees a `main` si
 ## Resumen rápido
 
 16 bugs reales (12 en la API y 4 en la web) y 3 casos para escalar. Docs ✅ en 12 bugs y ➖ en 4 (BUG-05, 13, 15 y 16), para poder medir cuánto ayuda la documentación.
+
+## Ya corridos por el agente (PR abiertos, no mergear)
+
+Para tener ejemplos listos, el agente ya analizó estos casos. Sus PR e issues quedan abiertos a propósito: **no los mergees**, así `main` conserva los bugs. Si pegás de nuevo el mismo reporte, Bugsmith lo reconoce como un error conocido y no repite el análisis; probá con los demás.
+
+| Caso | Resultado | Issue / PR |
+|---|---|---|
+| BUG-04 | PR correcto (`1 - percent / 100`) | #1 / #2 |
+| BUG-13 | PR correcto (`setLoading(false)` en el `catch`) | #3 / #4 |
+| BUG-16 | PR que parchea la web (`byService?.map`); no corrige la API que omite el campo | #5 / #6 |
+| ESC-01 | Escalado a una persona (issue, sin PR) | #7 |
+| BUG-05 | PR correcto (regex que acepta `+`, `-` y subdominios) | #8 / #9 |
+
+Quedan libres para probar: BUG-01, 02, 03, 06, 07, 08, 09, 10, 11, 12, 14, 15, ESC-02 y ESC-03.

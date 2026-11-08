@@ -1,0 +1,12 @@
+{
+  "name": "turnos-demo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev:api": "npm run dev -w @turnos/api",
+    "dev:web": "npm run dev -w @turnos/web",
+    "test": "npm test -w @turnos/api",
+    "typecheck": "npm run typecheck -w @turnos/api && npm run typecheck -w @turnos/web"
+  }
+}

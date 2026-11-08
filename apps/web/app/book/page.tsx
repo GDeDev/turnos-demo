@@ -45,6 +45,7 @@ export default function BookPage() {
       setLoading(false);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Error");
+      setLoading(false);
     }
   }
 

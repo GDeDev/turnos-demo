@@ -9,7 +9,7 @@ export function isValidEmail(email: string): boolean {
 
 /** Deja solo dígitos: "+54 9 11 5555-1234" -> "5491155551234". */
 export function normalizePhone(phone: string | undefined): string {
-  return phone!.replace(/\D/g, "");
+  return phone ? phone.replace(/\D/g, "") : "";
 }
 
 export function validateCustomer(raw: Partial<Customer> | undefined): Customer {
